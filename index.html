@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contactos Enyoi</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <img src="./img/Logo.png" alt="Logo">
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <h2>Mi agenda de Contactos</h2>
+        <label for="filtrar-tabla"></label>
+        <input
+          type="text"
+          name="filtro"
+          id="filtrar-tabla"
+          placeholder="Digite el Nombre de Contacto"
+        />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Telefono</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-contactos">
+            <tr class="contacto" id="primer-contacto">
+              <td class="info-nombre">Pablo</td>
+              <td class="info-telefono">12341</td>
+              <td class="info-email">pablo@samplemail.com</td>
+              
+            </tr>
+
+            <tr class="contacto">
+              <td class="info-nombre">Juan</td>
+              <td class="info-telefono">12342</td>
+              <td class="info-email">juan@samplemail.com</td>
+              
+            </tr>
+
+            <tr class="contacto">
+              <td class="info-nombre">Erica</td>
+              <td class="info-telefono">12343</td>
+              <td class="info-email">Erica@samplemail.com</td>
+             
+            </tr>
+
+            <tr class="contacto">
+              <td class="info-nombre">Diego</td>
+              <td class="info-telefono">12344</td>
+              <td class="info-email">diego22@samplemail.com</td>
+              
+            </tr>
+            <tr class="contacto">
+              <td class="info-nombre">Tatiana</td>
+              <td class="info-telefono">12345</td>
+              <td class="info-email">tatianalabacana@samplemail.com</td>
+             
+            </tr>
+          </tbody>
+        </table>
+
+        <span id="error-ajax" class="invisible"
+          >Error al buscar los contactos</span
+        >
+
+        <button id="cargar-contactos">Cargar Contactos</button>
+      </section>
+    </main>
+
+    <section class="container">
+      <h2 id="titulo-form">Adicionar nuevo Contacto</h2>
+      <ul id="mensajes-errores"></ul>
+
+      <form id="form-adicionar">
+        <div class="grupo">
+          <label for="nombre">Nombre:</label>
+          <input
+            id="nombre"
+            name="nombre"
+            type="text"
+            placeholder="digite el nombre del contacto"
+            class="campo"
+          />
+        </div>
+        <div class="grupo">
+          <label for="telefono">Telefono:</label>
+          <input
+            id="telefono"
+            name="telefono"
+            type="tel"
+            placeholder="digite el Telefono"
+            class="campo campo-medio"
+          />
+        </div>
+        <div class="grupo">
+          <label for="email">email:</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="digite el Email"
+            class="campo campo-medio"
+          />
+        </div>
+        
+        <button id="adicionar-contacto" class="boton bto-principal">
+          Adicionar
+        </button>
+      </form>
+    </section>
+
+    <script src="js/form.js"></script>
+    <script src="js/eliminarContacto.js"></script>
+    <script src="js/filtrar.js"></script>
+    <script src="js/cargarContactos.js"></script>
+  </body>
+</html>
